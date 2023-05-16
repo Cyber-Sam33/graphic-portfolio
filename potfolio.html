@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graphic Designer Portfolio</title>
+    <style>
+      /* CSS styles for your portfolio page */
+    </style>
+  </head>
+  <body>
+    <!-- Your HTML content goes here -->
+    <h1>Hello</h1>
+
+    <script>
+      // JavaScript code for your portfolio page
+
+      // Define your projects as an array of objects
+      var projects = [
+        {
+          title: "Project 1",
+          description: "This is project 1 description.",
+          image: "path/to/project1-image.jpg",
+        },
+        {
+          title: "Project 2",
+          description: "This is project 2 description.",
+          image: "path/to/project2-image.jpg",
+        },
+        // Add more projects as needed
+      ];
+
+      // Function to create project elements dynamically
+      function createProjectElement(project) {
+        var projectElement = document.createElement("div");
+        projectElement.className = "project";
+
+        var imageElement = document.createElement("img");
+        imageElement.src = project.image;
+        projectElement.appendChild(imageElement);
+
+        var titleElement = document.createElement("h2");
+        titleElement.textContent = project.title;
+        projectElement.appendChild(titleElement);
+
+        var descriptionElement = document.createElement("p");
+        descriptionElement.textContent = project.description;
+        projectElement.appendChild(descriptionElement);
+
+        return projectElement;
+      }
+
+      // Function to add projects to the portfolio page
+      function addProjectsToPage() {
+        var projectsContainer = document.getElementById("projects-container");
+
+        projects.forEach(function (project) {
+          var projectElement = createProjectElement(project);
+          projectsContainer.appendChild(projectElement);
+        });
+      }
+
+      // Call the function to add projects to the page
+      addProjectsToPage();
+    </script>
+  </body>
+</html>
