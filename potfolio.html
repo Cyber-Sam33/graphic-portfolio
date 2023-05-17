@@ -3,17 +3,17 @@
   <head>
     <title>Graphic Designer Portfolio</title>
     <style>
-      /* CSS styles for your portfolio page */
+      /* CSS styles for portfolio page */
     </style>
   </head>
   <body>
-    <!-- Your HTML content goes here -->
+    <!-- HTML content -->
     <h1>Hello</h1>
 
     <script>
-      // JavaScript code for your portfolio page
+      // JavaScript code for page
 
-      // Define your projects as an array of objects
+      // Projects as an array of objects
       var projects = [
         {
           title: "Project 1",
@@ -25,23 +25,23 @@
           description: "This is project 2 description.",
           image: "path/to/project2-image.jpg",
         },
-        // Add more projects as needed
+        // Add more projects as required
       ];
 
-      // Function to create project elements dynamically
+      // Function creates project elements dynamically
       function createProjectElement(project) {
-        var projectElement = document.createElement("div");
+        let projectElement = document.createElement("div");
         projectElement.className = "project";
 
-        var imageElement = document.createElement("img");
+        let imageElement = document.createElement("img");
         imageElement.src = project.image;
         projectElement.appendChild(imageElement);
 
-        var titleElement = document.createElement("h2");
+        let titleElement = document.createElement("h2");
         titleElement.textContent = project.title;
         projectElement.appendChild(titleElement);
 
-        var descriptionElement = document.createElement("p");
+        let descriptionElement = document.createElement("p");
         descriptionElement.textContent = project.description;
         projectElement.appendChild(descriptionElement);
 
@@ -50,15 +50,15 @@
 
       // Function to add projects to the portfolio page
       function addProjectsToPage() {
-        var projectsContainer = document.getElementById("projects-container");
+        let projectsContainer = document.getElementById("projects-container");
 
         projects.forEach(function (project) {
-          var projectElement = createProjectElement(project);
+          let projectElement = createProjectElement(project);
           projectsContainer.appendChild(projectElement);
         });
       }
 
-      // Call the function to add projects to the page
+      // Call the function to add projects to page
       addProjectsToPage();
     </script>
   </body>
